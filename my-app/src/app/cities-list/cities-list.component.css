@@ -1,0 +1,26 @@
+li  {
+    position: relative;
+}
+li .btn-delete {
+    position: absolute;
+    top:-7px;
+    right:-7px;
+    width:0px;
+    height:0px;
+    padding:0px;
+    background:#EE2333;
+    font-size:0px;
+    line-height:0px;
+    color:#fff;
+    border-radius:100%;
+    text-align:center;
+    cursor: pointer;
+    opacity:0;
+}
+li:hover .btn-delete {
+    width:14px;
+    height:14px;
+    font-size:14px;
+    line-height:12px;
+    opacity:1;
+}

@@ -1,0 +1,8 @@
+    <div class="form-inline justify-content-center mb-3">
+        <div class="form-group">
+          <input [(ngModel)]="inputCity" (keyup.enter)="setCity();" type="text" placeholder="Stadt" class="form-control" >
+        </div>
+        <div class="form-group ml-2">
+              <button class="btn btn-primary" (click)="setCity();">Suchen</button>
+        </div>
+    </div>

@@ -1,0 +1,16 @@
+<div class="card" *ngIf='weatherData && weatherData.cod==200'>
+    <div class="card-body text-center">
+        <h1>{{weatherData.name}}</h1>
+        <p class="display-1">{{weatherData.main.temp | number:'1.0-1'}}°C</p>
+        <img [src]="'http://openweathermap.org/img/w/' + weatherData.weather[0].icon + '.png'" class="weather-icon">
+        <p class="text-muted">{{weatherData.weather[0].description}}</p>
+        <p>
+          Sonnenauf-/untergang: 
+          {{weatherData.sys.sunrise * 1000 | date:'H:mm'}} /
+          {{weatherData.sys.sunset * 1000 | date:'H:mm'}}
+        </p>
+      </div>
+</div>
+<div *ngIf='weatherData && weatherData.cod==404' class="alert alert-warning" role="alert">
+    Ort nicht gefunden!
+</div>

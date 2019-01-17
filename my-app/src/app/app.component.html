@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="my-5">
+  <h1 class="display-1 text-center">
+    {{ title }}
+  </h1>
+  <div class="container my-4">
+    <app-city-input (citySet)="setCity($event)" [actCity]="actCity"></app-city-input>
+    <app-cities-list (citySet)="setCity($event)" (cityDelete)="deleteCity($event)" [Cities]="Cities" [actCity]="actCity"></app-cities-list>
+    <app-weather-display [weatherData]="weatherData"></app-weather-display>
+  </div>
+</div>

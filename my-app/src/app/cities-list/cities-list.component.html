@@ -1,0 +1,8 @@
+<ul class="list-inline text-center mb-4">
+  <li *ngFor="let city of Cities" class="list-inline-item">
+    <div>
+        <a href="#" class="btn btn-sm" (click)="setCity(city.name)" [class.btn-secondary]="city.name==actCity" [class.btn-outline-secondary]="city.name!=actCity">{{ city.name }}</a>
+        <div class="btn-delete" (click)="deleteCity(city.name)">&times;</div>
+    </div>
+  </li>
+</ul>
